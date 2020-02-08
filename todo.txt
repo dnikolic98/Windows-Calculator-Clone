@@ -1,0 +1,23 @@
+To do
+/******************************************************************************/
+
+media query
+implement reload log
+try numpad active
+fix when clear log refreshes everything
+buttons light up on keyboard click
+make buttons inactive on history showing
+maximize
+
+
+
+
+Unsuccessful
+/******************************************************************************/
+
+
+
+End
+/******************************************************************************/
+touch up
+rewrite the code

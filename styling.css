@@ -1,0 +1,188 @@
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+#Calculator{
+  position: fixed;
+  background-color: rgba(87,87,87, 0.9);
+  width: 320px;
+  height: 500px;
+  min-width: 320px;
+  min-height: 500px;
+  color: white;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  overflow: hidden;
+  left: calc(50% - 160px);
+  top: calc(50% - 250px);
+  box-shadow: 2px 3px 10px #1A1A1A;
+}
+
+.ui-icon { background-image: url("") !important; }
+
+.UpperHalf{
+  height: calc(45% - 35px);
+}
+
+.mainContainer{
+  height: calc(100% - 30px);
+  width: 100%;
+}
+
+#CalculatorHeader{
+  height: 10px;
+  padding: 10px;
+  font-size: 0.75em;
+}
+
+#topMenu{
+  height: calc(25%);
+  position: relative;
+}
+
+#mainDisplay{
+  height: 50%;
+  text-align: right;
+  font-size: 3em;
+  padding-right: 20px;
+
+}
+
+#secDisplay{
+  height: calc(25% - 20px);
+  text-align: right;
+  font-size: 1em;
+  color: #CECECE;
+  padding-right: 30px;
+  padding-top: 20px;
+}
+
+.otherButton{
+  background-color: inherit;
+  font-size: 1em;
+}
+
+#Calculator button:not(.otherButton){
+  width: 100%;
+  height: 100%;
+}
+#Calculator button{
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  outline: none;
+}
+
+#Calculator button:hover{
+background-color: rgba(101,101,101, 0.9);
+
+}
+
+#Calculator button:active{
+background-color: rgba(151,151,151, 0.9);
+}
+
+.LowerHalf{
+  height: 55%;
+  width: calc(100% - 10px);
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+}
+
+#Calculator table{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#Calculator table td{
+  width: 25%;
+}
+
+.Operator{
+  background-color: rgba(51,51,51, 0.9);
+}
+
+.Number{
+  background-color: rgba(7,7,7, 0.9);
+}
+
+.History{
+  background: #3A3A3A;
+  position: absolute;
+  height: 55%;
+  width: 100%;
+  visibility: hidden;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
+.Logs{
+  height: 90%;
+  overflow: auto;
+}
+
+.TrashBar{
+  height: 10%;
+}
+
+.Log{
+  height: 70px;
+}
+
+.mainDisplay:not(#mainDisplay){
+  height: calc(75% - 20px);
+  text-align: right;
+  font-size: 2em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  pointer-events: none;
+}
+
+.secDisplay:not(#secDisplay){
+  height: calc(25% - 10px);
+  text-align: right;
+  font-size: 0.9em;
+  color: #CECECE;
+  padding-top: 10px;
+  padding-right: 20px;
+  pointer-events: none;
+
+}
+
+.Log:hover{
+background-color: #656565;
+}
+
+#Calculator button:active{
+background-color: #979797;
+}
+
+#shwHistory{
+  width: 50px;
+  height: 50px;
+  float: right;
+  padding: none;
+}
+
+#noHis{
+  font-size: 1.5em;
+  padding-left: 15px;
+}
+
+
+@keyframes slideUp {
+  from{
+    height: 35%;
+    opacity: 0;
+  }to{
+    height: 55%;
+    opacity: 1;
+    visibility: visible;
+  }
+}
