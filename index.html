@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Basic Calculator</title>
-    <link rel="stylesheet" type="text/css" href="resources/css/scrollbar.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/minWidth.css">
-    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/minWidth.css" />
+    <link
+      rel="stylesheet"
+      href="vendors/font-awesome/css/font-awesome.min.css"
+    />
     <script src="resources/js/keyboardMapping.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="resources/css/styling.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="vendors/npm_modules/css-element-queries/src/ResizeSensor.js"></script>
     <script src="vendors/npm_modules/css-element-queries/src/ElementQueries.js"></script>
-    <link rel="stylesheet" type="text/css" href="resources/css/styling.css">
     <script src="resources/js/logic.js"></script>
-
   </head>
   <body>
     <form id="Calculator" class="Calculator">
@@ -24,98 +30,257 @@
       <div class="mainContainer">
         <div class="UpperHalf">
           <div id="topMenu">
-            <button type="button" class="otherButton" id="shwHistory" onclick=
-            "shwHideHistory()"> <i class="fa fa-history" aria-hidden="true"> </i>
+            <button
+              type="button"
+              class="otherButton"
+              id="shwHistory"
+              onclick="shwHideHistory()"
+            >
+              <i class="fa fa-history" aria-hidden="true"> </i>
             </button>
           </div>
-            <div id="secDisplay" class="secDisplay">
-            </div>
-            <div id="mainDisplay" class="mainDisplay">
-              0
-            </div>
+          <div id="secDisplay" class="secDisplay"></div>
+          <div id="mainDisplay" class="mainDisplay">
+            0
+          </div>
         </div>
         <div class="LowerHalf">
-            <table>
-              <tr>
-                <td>
-                  <button type="button" class="Operator" id="buttonCE" onclick="OnCE()"> CE </button>
-                </td>
-                <td>
-                  <button type="button" class="Operator" id="buttonC" onclick="OnClear()"> C </button>
-                </td>
-                <td>
-                  <button type="button" class="Operator" id="buttonBks" onclick="OnBks()"> ⌫ </button>
-                </td>
-                <td>
-                  <button type="button" class="Operator" id="button/" value="/" onclick="OnOperator(this.value)"> / </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <button type="button" class="Number" id="button7" value="7" onclick="OnNumber(this.value)"> 7 </button>
-                </td>
-                <td>
-                  <button type="button" class="Number" id="button8" value="8" onclick="OnNumber(this.value)"> 8 </button>
-                </td>
-                <td>
-                  <button type="button" class="Number" id="button9" value="9" onclick="OnNumber(this.value)"> 9 </button>
-                </td>
-                <td>
-                  <button type="button" class="Operator" id="button*" value="*" onclick="OnOperator(this.value)"> × </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <button type="button" class="Number" id="button4" value="4" onclick="OnNumber(this.value)"> 4 </button>
-                </td>
-                <td>
-                  <button type="button" class="Number" id="button5" value="5" onclick="OnNumber(this.value)"> 5 </button>
-                </td>
-                <td>
-                  <button type="button" class="Number" id="button6" value="6" onclick="OnNumber(this.value)"> 6 </button>
-                </td>
-                <td>
-                  <button type="button" class="Operator" id="button-" value="-" onclick="OnOperator(this.value)"> - </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <button type="button" class="Number" id="button1" value="1" onclick="OnNumber(this.value)"> 1 </button>
-                </td>
-                <td>
-                  <button type="button" class="Number" id="button2" value="2" onclick="OnNumber(this.value)"> 2 </button>
-                </td>
-                <td>
-                  <button type="button" class="Number" id="button3" value="3" onclick="OnNumber(this.value)"> 3 </button>
-                </td>
-                <td>
-                  <button type="button" class="Operator" id="button+" value="+" onclick="OnOperator(this.value)"> + </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <button type="button" class="Operator" id="buttonNe" onclick="OnNegate()"> <u>+</u> </button>
-                </td>
-                <td>
-                  <button type="button" class="Number" id="button0" value="0" onclick="OnNumber(this.value)"> 0 </button>
-                </td>
-                <td>
-                  <button type="button" class="Operator" id="buttonDec" value="." onclick="OnNumber(this.value)"> . </button>
-                </td>
-                <td>
-                  <button type="button" class="Operator" id="buttonEq" value="=" onclick="OnEqual()"> = </button>
-                </td>
-              </tr>
+          <table>
+            <tr>
+              <td>
+                <button
+                  type="button"
+                  class="Operator"
+                  id="buttonCE"
+                  onclick="OnCE()"
+                >
+                  CE
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Operator"
+                  id="buttonC"
+                  onclick="OnClear()"
+                >
+                  C
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Operator"
+                  id="buttonBks"
+                  onclick="OnBks()"
+                >
+                  ⌫
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Operator"
+                  id="button/"
+                  value="/"
+                  onclick="OnOperator(this.value)"
+                >
+                  /
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  type="button"
+                  class="Number"
+                  id="button7"
+                  value="7"
+                  onclick="OnNumber(this.value)"
+                >
+                  7
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Number"
+                  id="button8"
+                  value="8"
+                  onclick="OnNumber(this.value)"
+                >
+                  8
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Number"
+                  id="button9"
+                  value="9"
+                  onclick="OnNumber(this.value)"
+                >
+                  9
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Operator"
+                  id="button*"
+                  value="*"
+                  onclick="OnOperator(this.value)"
+                >
+                  ×
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  type="button"
+                  class="Number"
+                  id="button4"
+                  value="4"
+                  onclick="OnNumber(this.value)"
+                >
+                  4
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Number"
+                  id="button5"
+                  value="5"
+                  onclick="OnNumber(this.value)"
+                >
+                  5
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Number"
+                  id="button6"
+                  value="6"
+                  onclick="OnNumber(this.value)"
+                >
+                  6
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Operator"
+                  id="button-"
+                  value="-"
+                  onclick="OnOperator(this.value)"
+                >
+                  -
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  type="button"
+                  class="Number"
+                  id="button1"
+                  value="1"
+                  onclick="OnNumber(this.value)"
+                >
+                  1
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Number"
+                  id="button2"
+                  value="2"
+                  onclick="OnNumber(this.value)"
+                >
+                  2
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Number"
+                  id="button3"
+                  value="3"
+                  onclick="OnNumber(this.value)"
+                >
+                  3
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Operator"
+                  id="button+"
+                  value="+"
+                  onclick="OnOperator(this.value)"
+                >
+                  +
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button
+                  type="button"
+                  class="Operator"
+                  id="buttonNe"
+                  onclick="OnNegate()"
+                >
+                  <u>+</u>
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Number"
+                  id="button0"
+                  value="0"
+                  onclick="OnNumber(this.value)"
+                >
+                  0
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Operator"
+                  id="buttonDec"
+                  value="."
+                  onclick="OnNumber(this.value)"
+                >
+                  .
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="Operator"
+                  id="buttonEq"
+                  value="="
+                  onclick="OnEqual()"
+                >
+                  =
+                </button>
+              </td>
+            </tr>
           </table>
         </div>
       </div>
 
       <div class="History" id="History">
         <div class="Logs" id="Logs">
-        <p id="noHis">No history yet</p>
+          <p id="noHis">No history yet</p>
         </div>
-        <div class="TrashBar" id="TrashBar">
-        </div>
+        <div class="TrashBar" id="TrashBar"></div>
       </div>
     </form>
   </body>

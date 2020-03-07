@@ -1,28 +1,27 @@
-#Calculator[min-width~="550px"] .mainContainer  {
+#Calculator[min-width~="550px"] .mainContainer {
   position: relative;
   float: left;
-  width:60%;
+  width: 60%;
   height: calc(100% - 30px);
-
 }
 
-#Calculator[min-width~="800px"] .mainContainer  {
-  width:calc(100% - 320px);
+#Calculator[min-width~="800px"] .mainContainer {
+  width: calc(100% - 320px);
 }
 
-#Calculator[min-width~="550px"] #shwHistory  {
+#Calculator[min-width~="550px"] #shwHistory {
   display: none;
 }
 
-#Calculator[min-width~="550px"] .History  {
+#Calculator[min-width~="550px"] .History {
   display: block !important;
   visibility: visible;
   position: relative;
   float: right;
   visibility: visible;
   height: calc(100% - 30px);
-  width:40%;
+  width: 40%;
   right: 0;
-  background-color: rgba(87,87,87, 0);
+  background-color: rgba(87, 87, 87, 0);
   max-width: 320px;
 }
